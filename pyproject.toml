@@ -11,7 +11,7 @@ dependencies = [
     "jupyterlab>=4.6.3",
     "numpy>=2.5.2",
     "scikit-learn>=1.9.0",
-    "torch>=2.13.0",
+    "torch",
 ]
 
 [project.scripts]
@@ -20,3 +20,11 @@ pytorch-crash-course = "pytorch_crash_course:main"
 [build-system]
 requires = ["uv_build>=0.12.3,<0.13.0"]
 build-backend = "uv_build"
+
+[[tool.uv.index]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch" }
