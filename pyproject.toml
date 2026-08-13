@@ -1,0 +1,22 @@
+[project]
+name = "pytorch-crash-course"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Francis Parwez", email = "francisparwez@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "jupyterlab>=4.6.3",
+    "numpy>=2.5.2",
+    "scikit-learn>=1.9.0",
+    "torch>=2.13.0",
+]
+
+[project.scripts]
+pytorch-crash-course = "pytorch_crash_course:main"
+
+[build-system]
+requires = ["uv_build>=0.12.3,<0.13.0"]
+build-backend = "uv_build"
